@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+--primary: #cfcfc4 ;
+--dark-primary: #181818;
+--dark-secondary: #292825;
+--secondary: rgb(231, 228, 221) ;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+}
+body,header .header,main,main .sidebar {
+    transition:all .5s ease;
+
+}
+body{
+    background-color: var(--secondary);
+}
+main{
+    color: var(--primary);
+
+}
+svg{
+    width: 24px;
+height: 24px;
+}
+
+a{
+    color: var(--dark-primary);
+
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/* -------------HEADER-------------------- */
+header{
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: header;
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+header h3 svg{
+    display: none;
+}
+.header{
+    padding: 1em;
+    width: 100%;
+    display: flex;
+justify-content: space-between;
+align-items: center;
+}
+/*  DARK MODE */
+.logo{
+    cursor: pointer;
+    position: relative;
+}
+.dark{
+}
+.logo .dark-mode{
+    position: relative;
+
+    display: flex;
+    border-radius: 16px;
+    padding:.25em .7em;
+    background-color: var(--secondary);
+    gap: 1em;
+}
+/* SUN & MOON */
+.selected-mode svg{
+}
+#sun{
+    z-index: 2;
+
+    stroke: var(--secondary);
+}
+.dark #sun{
+    stroke: var(--secondary);
+}
+#moon{
+    z-index: 2;
+    stroke: var(--dark-secondary);
+}
+.dark .selected-mode{
+    transition: all .4s ease;
+    transform: translateX(100%);
+}
+.dark .selected-mode{
+    background-color: var(--secondary);
+}
+.selected-mode{
+    transition: all .4s ease;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: var(--dark-secondary);
+}
+.header .logo .dark-mode svg{
+width: 20px;
+}
+.logo.active nav{
+    visibility: visible;
+    opacity:1;
+    z-index: -1;
+    transition: all .3s ;
+    animation:a ;
+    transform: translateX(0%);
+}
+.logo nav{
+    visibility: hidden;
+    opacity:.5;
+
+    transform: translateX(350%);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    right: 0;
+        width: 120px;
+  background-color:var(--primary);
+    position: absolute;
+    bottom: -5em;
+    border-radius: 12px;
+    padding: .5em;
+}
+.logo nav ul li a:hover{
+    transform: translateX(-5px);
+    transition:all .3s ;
+}
+.logo nav ul li svg{
+    width: 32px;
+}
+
+.logo nav ul li a{
+    margin-right: 0.5em;
+    gap: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------MAIN AREA-------------------- */
+
+main {
+padding-top: 90px;
+    height: 84vh;
+    display: grid;
+    grid-template-columns: minmax(max-content,250px) ;
+}
+header {
+    -webkit-box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75);
+}
+header h3{
+    margin-left: 2.5em;
+
+}
+header h3::after{
+
+}
+.sidebar{
+    position: relative;
+display: flex;
+justify-content: center;
+background-color: var(--primary);
+}
+
+.sidebar ul li:hover,
+.sidebar ul li::before:hover,
+.sidebar ul li::before,
+.sidebar ul li a:hover
+{
+    transition:all  .4s ease;
+}
+.sidebar ul{
+    margin-top: 1em;margin-right: 2em;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+align-items: center;
+gap:1.25em;
+}
+.sidebar ul li {
+    position: relative;
+
+}
+.sidebar ul li:hover a{
+    transition: unset;
+    color: var(--dark-secondary ) !important;
+
+}
+.sidebar ul li a{
+    z-index: 10000;
+}
+.dark .sidebar ul li:hover::before
+{
+    background-color:var(--dark-secondary);
+
+}
+.sidebar ul li:hover::before
+{
+    top: -.25em;
+    left: -10%;
+    border-radius: 16px 0 0 16px; 
+    content: "";
+    position: absolute;
+    background-color:var(--secondary);
+    width: 150%;
+    height: 100%;
+    padding: .3em 1em;
+    transition:all  .4s ease;
+
+}
+.sidebar ul li{
+    position: relative;
+    transition: .4s ease;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.sidebar ul  a:hover{
+    transition: all .4s;
+    transform: translateX(.4em);
+    opacity: 1;
+}
+.sidebar ul  a{
+    font-weight: 500;
+    opacity: .7;
+    gap: .6em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar svg{
+    width: 22px;
+}
+.content{
+    grid-column: 2;
+}
+.look:hover svg {
+  
+}
+.look:hover {
+  
+    transform: unset !important;
+    background-color: rgb(36, 35, 34);
+    color:  var(--secondary);
+stroke:  var(--secondary);
+
+}
+.look{
+  
+    transition:all .4s ease;
+    font-size: 15px;
+    padding: .7em 1.5em;
+    border-radius: 30px;
+    background-color: var(--secondary);
+    color: var(--dark-secondary);
+    stroke: var(--dark-secondary);
+    font-weight: 800 !important;
+    font-size: 14px;
+    /* background-color: rgb(97, 20, 175); */
+    opacity: 1 !important   ;
+    /* color: rgb(169, 127, 211); */
+    position: fixed;
+    bottom: 1em;
+}
+
+
+/* DARK MODE */
+
+
+.dark *{
+    color:var(--primary) ;
+}
+.dark .logo .dark-mode,.dark {
+background-color: var(--dark-secondary);
+}
+.dark .look{
+    background-color: var(--dark-secondary);
+}
+.dark main{
+    background-color: var(--dark-primary);
+}
+.dark header,.dark .sidebar
+{
+    background-color: var(--dark-primary);
+}
+.dark .look:hover {
+    color: var(--dark-secondary) ;
+    stroke: var(--dark-secondary) ;
+
+}
+.dark .look:hover{
+    background-color: var(--dark-secondary);
+
+}
+
+@media screen and (max-width:768px) {
+    .sidebar{
+        z-index: 100000;    
+padding-top: 1em;
+}
+.sidebar ul li:hover::before
+{
+    border-radius: 16px;
+    width: 95%;
+}
+    header h3{
+        margin: 0;
+    }
+    header h3 svg{
+        display: block;
+    }
+header h3 span{
+    display: none;
+}
+    .sidebar.active{
+        transform: translateX(0%);
+    }
+    .sidebar ul{
+        margin: 0;
+    }
+    .sidebar{
+        position: fixed;
+        grid-column: 1/13;
+        height: 85vh;
+        width: 100%;
+    transform: translateX(-100%);
+    transition: .4s ease;
+    }
+    .dark .selected-mode{
+
+        transform: unset;
+    }
+    .selected-mode{
+        width: 100%;
+    }
+    #sun{
+z-index: 3;
+    }
+    .dark #sun{
+        visibility: hidden;
+    }
+    #moon{
+ position: absolute;
+    }
+}
