@@ -1,0 +1,207 @@
+/* Table */
+.table{
+    padding:1em 2em;
+    display: flex;
+flex-direction: column;
+}
+
+.cover-table h2{
+    margin-bottom: 1.2em;
+    color: var(--dark-secondary);
+}
+.cover-table{
+    position: relative;
+    padding:2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0px 10px 21px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 10px 21px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 21px -1px rgba(0,0,0,0.75);
+}
+table tr:first-child{
+    font-size: 14px;
+    
+    color: whitesmoke;
+    background-color: #957DAD;
+}
+.opsi a:nth-child(2) svg{
+    color: #4d70cf;
+}
+.opsi a:first-child svg{
+    color: #FFBD44;
+}
+.opsi a:last-child svg{
+    color: #FF605C;
+}
+.circle:first-child
+{
+    background-color: #FF605C;
+}
+.circle:nth-child(2){
+    background-color: #FFBD44;
+}
+.circle:last-child{
+    background-color: #00CA4E;
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+.circles{
+    gap: .3em;
+    display: flex;
+    top: 5%;
+    right: 2%;
+    position: absolute;
+    /* width: 30px; */
+    
+    
+    height: 30px;
+}
+table tr td{
+    /* padding:0 1em; */
+    color: var(--dark-secondary);
+}
+th:last-child{
+    border-radius:  0 12px 0 0;
+    
+}
+th:first-child{
+    border-radius: 12px 0 0 0;
+
+}
+table td,
+table th
+{
+padding: 1em;
+}
+table {
+ 
+    text-align: center;
+position: relative;
+    border-radius: 12px;
+    background-color: white;
+    border: none !important;
+}
+.add a svg{
+    width: 20px;
+}
+.add a:hover{
+    background-color: var(--dark-secondary);
+    color: var(--secondary);
+}
+.add a{
+gap: .5em;
+margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 18px;
+    padding: .5em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+}
+.add{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.dark table{
+    
+    background-color: var(--dark-primary);
+}
+.dark .cover-table h2{
+    color: var(--secondary) !important;
+}
+.dark .cover-table{
+    background-color: var(--dark-secondary);
+    }
+
+    .dark .add svg{
+        stroke: var(--secondary);    
+    
+    }
+    .dark .add:hover svg{
+        stroke: var(--dark-secondary);
+    
+    }
+    .dark .add:hover a{
+        background-color: var(--secondary);
+        color: var(--dark-secondary);
+    }
+    .dark .add a{
+    background-color: var(--dark-secondary);
+    color: var(--secondary);    
+    }
+    
+    header{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    form select,
+    form input{
+        border: none;
+        background-color: var(--dark-primary);
+        border: 1px solid var(--dark-secondary);
+        padding-left: 3px;
+        border-radius: 20px;
+        padding: .8em;
+        color: var(--primary);
+    }
+    .rows{
+        display: flex;
+        flex-direction: row;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+align-items: center;
+    }
+    form div{
+        font-size: 14px;
+        gap: .5em;
+
+        display: flex;
+        font-weight: bold;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--dark-primary);
+    }
+    button:hover{
+        transform: all .4s ease;
+        background-color: var(--dark-primary);
+        color: var(--secondary);
+    }
+    button{
+        margin-top: 1em;
+transform: all .4s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        gap: .5em;
+border-radius: 20px;
+background-color: var(--secondary);
+padding:.5em 1em;}
+
+.dark .table button:hover{
+    transform: all .4s ease;
+    
+    background-color: var(--secondary);
+    color: var(--dark-primary);
+}
+.dark .table button{
+    background-color: var(--dark-secondary);
+    color: var(--primary);
+    transform: all .4s ease;
+}
